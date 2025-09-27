@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Home</title>
+  <meta name="description" content="MKstream - Watch anime, donghua, cartoons & more. Dark navy modern theme." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="dark-navy">
+  <header class="site-header">
+    <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+    <div class="brand" id="brand"><img id="logo" src="" alt="" style="display:none"/> <span id="site-name">MKstream</span></div>
+    <div class="header-center" id="header-cats"></div>
+    <div class="header-right">
+      <button id="search-toggle" class="icon">🔍</button>
+      <button id="admin-btn" class="admin-btn">Admin</button>
+    </div>
+  </header>
+
+  <nav id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="menu-close" class="menu-close">✕</button>
+    <ul id="menu-cats"></ul>
+  </nav>
+
+  <main>
+    <section class="specials">
+      <h2>Today's Special</h2>
+      <div id="todays-special" class="grid"></div>
+      <h3>Yesterday's Special</h3>
+      <div id="yesterday-special" class="grid"></div>
+    </section>
+
+    <section class="blocks two-columns">
+      <div class="block">
+        <h2>Recently Uploaded</h2>
+        <div id="recent-grid" class="grid lazy-grid"></div>
+        <div class="pager"><button id="recent-loadmore" class="loadmore">Load More</button></div>
+      </div>
+      <div class="block">
+        <h2>Most Viewed</h2>
+        <div id="most-grid" class="grid lazy-grid"></div>
+        <div class="pager"><button id="most-loadmore" class="loadmore">Load More</button></div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>Categories</h2>
+      <div id="category-list" class="grid cats-grid"></div>
+    </section>
+  </main>
+
+  <div id="search-overlay" class="search-overlay" hidden>
+    <input id="search-input" placeholder="Search for series, episodes, categories..." />
+    <button id="search-close">Close</button>
+  </div>
+
+  <footer class="site-footer">MKstream — Clean install — Dark navy theme</footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

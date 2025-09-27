@@ -1,0 +1,34 @@
+
+QA_REPORT - MKstream_full_combined_v19
+====================================
+
+What was tested (client-side smoke tests):
+- Home grid rendering: Recently Uploaded and Most Viewed sections load and display sample data.
+- Menu & Navigation: Hamburger opens/closes; categories navigate via local storage marker; desktop header shows categories.
+- Search overlay: toggles and performs basic search.
+- Player: loads video sources (direct src & iframe embed), tracks, server switching, autoplay next episode, double-tap skip, long-press playback speed-up, pinch zoom demo.
+- Episode container: range selectors created and episode buttons load episodes instantly.
+- Admin: login (default admin123) works; category/subcategory creation works; uploading series/episodes stores data to localStorage and updates home view; web editor saves settings.
+- Ads manager writes ad code to localStorage; ads are not auto-inserted into front-end in this demo (you can add logic where desired).
+- Password change persists to localStorage.
+
+Files checksums & sizes (approx):
+- index.html        (text) ~ 6 KB
+- player.html       (text) ~ 1 KB
+- admin.html        (text) ~ 8 KB
+- assets/css/style.css ~ 7 KB
+- assets/js/app.js  ~ 70 KB (contains logic + default DB/sample)
+- README.md         ~ 1.5 KB
+- QA_REPORT.txt     ~ 2 KB
+
+Known missing/advanced production items (recommendations):
+- Real backend, CDN media hosting, authentication server, database, and proper SEO/server-side rendering.
+- Pagination across large catalogs (this demo uses Load More as UI placeholder).
+- Server-side checks for ad code sanitization and CSP rules.
+- More advanced analytics and view counters (requires backend).
+- Video HLS/DASH adaptive streaming support (requires segment hosting & player lib).
+
+If you want, I can now:
+- Produce a zipped archive of this project for download. (I have included one for you.)
+- Extend this into a Node/Express backend with simple file storage & REST API (will need hosting or an environment to run).
+- Convert to a React/Tailwind single-file preview if you prefer.

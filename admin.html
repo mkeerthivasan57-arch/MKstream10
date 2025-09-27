@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Admin</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="dark-navy">
+  <header class="site-header admin-header">
+    <div class="brand"><span id="site-name-admin">MKstream Admin</span></div>
+    <div class="header-right"><button id="logout-btn">Logout</button></div>
+  </header>
+  <main class="admin-main">
+    <section class="login" id="login-section">
+      <h2>Admin Login</h2>
+      <input id="login-pass" type="password" placeholder="Enter password" />
+      <button id="login-btn" class="blue-box">Login</button>
+      <p>Default password: <code>admin123</code></p>
+    </section>
+
+    <section id="admin-panel" hidden>
+      <h2>Video Editor</h2>
+      <div class="editor">
+        <h3>Create Category</h3>
+        <input id="new-category" placeholder="Category name" />
+        <button id="add-cat" class="blue-box">Add Category</button>
+
+        <h3>Create Subcategory</h3>
+        <input id="new-subcat" placeholder="Subcategory name" />
+        <select id="subcat-parent"></select>
+        <button id="add-subcat" class="blue-box">Add Subcategory</button>
+
+        <h3>Upload Series / Episode</h3>
+        <select id="editor-cat"></select>
+        <select id="editor-subcat"></select>
+        <input id="series-title" placeholder="Series title" />
+        <input id="episode-number" type="number" placeholder="Episode number" />
+        <input id="episode-name" placeholder="Episode name" />
+        <input id="thumb-url" placeholder="Thumbnail URL (jpg/png)" />
+        <textarea id="embed-or-url" placeholder="Video URL or embed code (iframe)"></textarea>
+
+        <div id="servers-area">
+          <h4>Servers</h4>
+          <button id="add-server">+ Add Server</button>
+          <div id="servers-list"></div>
+        </div>
+
+        <div id="subs-area">
+          <h4>Subtitles</h4>
+          <button id="add-sub">+ Add Subtitle</button>
+          <div id="subs-list"></div>
+        </div>
+
+        <button id="save-upload" class="blue-box big">Upload (Save)</button>
+      </div>
+
+      <hr/>
+      <h2>Web Editor</h2>
+      <div class="editor">
+        <label>Site name <input id="we-name" /></label>
+        <label>Logo URL <input id="we-logo" /></label>
+        <label>Header color <input id="we-color-header" type="color" /></label>
+        <label>Accent color <input id="we-color-accent" type="color" /></label>
+        <label>Text font <input id="we-font" placeholder="e.g. Arial, Roboto"/></label>
+        <button id="we-save" class="blue-box">Save Web Settings</button>
+      </div>
+
+      <hr/>
+      <h2>Ads Manager</h2>
+      <div class="editor">
+        <label>Ad placement HTML<textarea id="ad-code" placeholder="Paste ad code or URL"></textarea></label>
+        <label>Frequency (seconds) <input id="ad-frequency" type="number" value="120" /></label>
+        <button id="ad-save" class="blue-box">Save Ads</button>
+      </div>
+
+      <hr/>
+      <h2>Change Password</h2>
+      <input id="new-pass" type="password" placeholder="New password" />
+      <button id="change-pass" class="blue-box">Change Password</button>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
